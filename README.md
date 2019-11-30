@@ -110,7 +110,7 @@ them you may generate a self-signed SSL certificate.
 #### Start
 If you are running docker with non root user, make sure the UID and GID in app/Dockerfile are the same as your current UID/GID
 ```
-mkdir -p ./volumes/app/mattermost/{data,logs,config,plugins}
+mkdir -pv ./volumes/app/mattermost/{data,logs,config,plugins,client-plugins}
 chown -R 2000:2000 ./volumes/app/mattermost/
 docker-compose start
 ```
